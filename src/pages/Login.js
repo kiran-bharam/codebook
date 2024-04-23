@@ -19,7 +19,7 @@ export const Login = () => {
         password: password.current.value,
       };
       const data = await login(loginDetail);
-      data.accessToken ? navigate("/products") : toast.error(data);
+      data?.accessToken ? navigate("/products") : toast.error(data);
     } catch (error) {
       toast.error(error.message);
     }

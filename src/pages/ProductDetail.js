@@ -46,16 +46,20 @@ export const ProductDetail = () => {
         </p>
         <div className="flex flex-wrap justify-around">
           <div className="max-w-xl my-3">
-            <img className="rounded" src={product.poster} alt={product.name} />
+            <img
+              className="rounded"
+              src={product?.poster}
+              alt={product?.name}
+            />
           </div>
           <div className="max-w-xl my-3">
             <p className="text-3xl font-bold text-gray-900 dark:text-slate-200">
               <span className="mr-1">$</span>
-              <span className="">{product.price}</span>
+              <span className="">{product?.price}</span>
             </p>
             <p className="my-3">
               <span>
-                <Rating rating={product.rating} />
+                <Rating rating={product?.rating} />
               </span>
             </p>
             <p className="my-4 select-none">
